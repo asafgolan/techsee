@@ -29,11 +29,11 @@ class SearchBar extends React.Component {
     render() {
       return (
         <form onSubmit={this.handleSubmit}>
-          <label>
-            Name:
-            <input type="text" value={this.state.value} onChange={this.handleChange} />
+          <label className='mr-2'>
+            Name
+            <input placeholder='Enter the tester name' type="text" value={this.state.value} onChange={this.handleChange} />
           </label>
-          <input type="submit" value="fetch" />
+          <input className='d-block mb-4 mt-2' type="submit" value="fetch" />
         </form>
       );
     }

@@ -46,7 +46,7 @@ class Log extends React.Component {
   }
 
   handleformSubmit(name){
-    
+
       if(this.validate(name)){
         getTesters(name)
                 .then(data =>{
@@ -73,10 +73,15 @@ class Log extends React.Component {
   render() {
     return (
       <div>
+
+        <h1>
+           Tester log
+        </h1>
+
         <SearchBar handleformSubmit={this.handleformSubmit} handleformChange={this.handleformChange} />
         {
           this.state.error !== null &&
-          <p className='error'>
+          <p className='alert-danger'>
             {this.state.error}
           </p>
         }

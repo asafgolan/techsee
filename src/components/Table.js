@@ -5,8 +5,8 @@ import React from 'react';
 export default function Table (props){
   console.log('PROPS', props)
   return(
-    <div className='tableContainer'>
-    <table className="table">
+    <div>
+    <table className="table table-striped table-dark">
         <thead>
           <tr>
             <th>First Name</th>
