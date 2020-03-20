@@ -1,15 +1,6 @@
-# Project Title
+#Techsee
 
 Developer task for Techsee
-
-
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
 
 ### Installing
 
