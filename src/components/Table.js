@@ -26,8 +26,6 @@ export default function Table (props){
           </tr>
         </thead>
         <tbody>
-
-
         {
            props.data.map((row,index) => (
               <tr key={index}>
@@ -37,7 +35,6 @@ export default function Table (props){
                 <td>{row.bugs.map((bug) => ( bug.title)).join(", ")}</td>
               </tr>
             ))
-
         }
         </tbody>
       </table>

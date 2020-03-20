@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-
 class SearchBar extends React.Component {
   constructor(props) {
       super(props);
@@ -16,15 +14,9 @@ class SearchBar extends React.Component {
    }
 
    handleSubmit(event) {
-     alert('A name was submitted: ' + this.state.value);
      event.preventDefault();
-     let val = this.state.value
-     console.log(this.props, val)
-
      this.props.handleformSubmit(this.state.value)
-
    }
-
 
     render() {
       return (

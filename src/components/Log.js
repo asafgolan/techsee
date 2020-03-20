@@ -20,7 +20,6 @@ class Log extends React.Component {
   }
 
   sortBy(key){
-    console.log('this.state.data',this.state.data)
     if(this.state[key] ){
       this.setState({data: this.state.data.sort((a, b) => (a[key] > b[key]) ? 1 : -1)})
       this.setState({[key]: 0})
@@ -29,14 +28,15 @@ class Log extends React.Component {
       this.setState({[key]: 1})
     }
   }
+
   handleformChange(){
       this.setState({error: null})
   }
+
   validate(name){
     let x = false
     if(name.length < 2){
       this.setState({error:'name cant be less than 2 charachters'})
-
     }else if(name.length > 12){
       this.setState({error:'name cant be longer than 12 charachters'})
     }else{
@@ -46,11 +46,9 @@ class Log extends React.Component {
   }
 
   handleformSubmit(name){
-
       if(this.validate(name)){
         getTesters(name)
                 .then(data =>{
-                    console.log('DATA', data == '', name, !Array.isArray(data))
                     if(data !== ''){
                       if(!Array.isArray(data) && data !== null){
                          let demiData =[]
@@ -73,11 +71,7 @@ class Log extends React.Component {
   render() {
     return (
       <div>
-
-        <h1>
-           Tester log
-        </h1>
-
+        <h1>Tester log</h1>
         <SearchBar handleformSubmit={this.handleformSubmit} handleformChange={this.handleformChange} />
         {
           this.state.error !== null &&
@@ -89,7 +83,6 @@ class Log extends React.Component {
             this.state.data !== null &&
             <Table data={this.state.data} sortBy={this.sortBy} />
         }
-
       </div>
     );
   }
