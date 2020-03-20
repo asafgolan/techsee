@@ -13,13 +13,13 @@ export default function Table (props){
             <th>Last Name
             <button
               onClick={() => props.sortBy('lastName')}
-              disabled={!props.data.length}>
+              disabled={!props.data.length}> v
             </button>
             </th>
             <th>Country
             <button
               onClick={() => props.sortBy('country')}
-              disabled={!props.data.length}>
+              disabled={!props.data.length}> v
             </button>
             </th>
             <th>Bugs</th>
