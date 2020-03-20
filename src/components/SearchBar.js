@@ -21,9 +21,9 @@ class SearchBar extends React.Component {
     render() {
       return (
         <form onSubmit={this.handleSubmit}>
-          <label className='mr-2'>
+          <label>
             Name
-            <input placeholder='Enter the tester name' type="text" value={this.state.value} onChange={this.handleChange} />
+            <input className='ml-2' placeholder='Enter the tester name' type="text" value={this.state.value} onChange={this.handleChange} />
           </label>
           <input className='d-block mb-4 mt-2' type="submit" value="fetch" />
         </form>
